@@ -89,7 +89,7 @@ def pagina_ponto(request):
                 sessao_aberta.min_trabalhados = trabalhou
                 sessao_aberta.diferenca_min = trabalhou - MINUTOS_ESPERADOS
                 sessao_aberta.save()
-                messages.success(request, f'Saída de {bolsista.nome} registrada!')
+                messages.success(request, f'Saída de {bolsista.nome} registrada!', extra_tags='saida')
 
         except Bolsista.DoesNotExist:
             messages.error(request, 'Bolsista não encontrado.')
