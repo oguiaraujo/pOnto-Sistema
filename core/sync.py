@@ -17,7 +17,7 @@ def montar_dados_bolsista(bolsista):
     dados = {
         "bolsista": {
             "nome": bolsista.nome,
-            "pendencia_display": bolsista.pendencia_display
+            "pendencia_display": bolsista.pendencia_display()
         },
         "sessoes": []
     }
