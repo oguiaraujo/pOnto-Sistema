@@ -13,7 +13,7 @@ def montar_dados_bolsista(bolsista):
     Monta o dicionário completo do bolsista para upload.
     Roda de forma síncrona (antes da thread), garantindo acesso seguro ao banco.
     """
-    sessoes = bolsista.sessaotrabalho_set.all().order_by('entrada')
+    sessoes = bolsista.sessaotrabalho_set.all().order_by('-entrada')
     dados = {
         "bolsista": {
             "nome": bolsista.nome,
